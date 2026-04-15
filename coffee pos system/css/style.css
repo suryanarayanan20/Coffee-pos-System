@@ -1,0 +1,104 @@
+:root{
+  --bg-dark:#061024;
+  --muted:#94a3b8;
+  --accent1:#ff6b6b;
+  --accent2:#ffd166;
+  --card-glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+  --surface:#0b1220;
+  --currency-color:#ffd166;
+}
+
+/* background */
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased;}
+body{
+  color:#e6eef8;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+    linear-gradient(180deg,#041022 0%, #071427 40%, #0b1a2b 100%);
+  background-attachment: fixed;
+}
+
+/* Top bar */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;padding:18px 28px;
+  background: linear-gradient(90deg, rgba(255,107,107,0.06), rgba(255,209,102,0.03));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:52px;height:52px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.brand h1{margin:0;font-size:20px}
+.subtitle{margin:0;font-size:12px;color:var(--muted)}
+.nav{display:flex;gap:8px}
+.pill{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:999px;color:#fff;cursor:pointer}
+.pill.ghost{opacity:0.7}
+
+/* Layout */
+.wrap{max-width:1180px;margin:28px auto;display:grid;grid-template-columns:1fr 380px;gap:20px;padding:0 18px}
+@media(max-width:920px){ .wrap{grid-template-columns:1fr; padding:0 12px} .right{order:2} .left{order:1} }
+
+/* Cards */
+.card{background:linear-gradient(180deg,var(--card-glass),var(--glass-2));border-radius:14px;padding:14px;box-shadow: 0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);}
+.mt{margin-top:12px}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.tag{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#081826;padding:6px 8px;border-radius:999px;font-weight:700;font-size:12px}
+.menu-list{display:flex;flex-direction:column;gap:12px;padding-top:6px}
+
+/* Menu item */
+.menu-item{
+  display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.02));
+  transition:transform .18s ease, box-shadow .18s ease;
+  border:1px solid rgba(255,255,255,0.02);
+}
+.menu-item:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+.menu-info{display:flex;gap:12px;align-items:center}
+.coffee-thumb{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#061024;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:0 8px 20px rgba(255,107,107,0.12)}
+.menu-title{font-weight:800}
+.menu-sub{font-size:13px;color:var(--muted)}
+
+/* add button */
+.btn{padding:8px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),#ff9a6b);color:#061024;box-shadow:0 8px 20px rgba(255,107,107,0.14)}
+
+/* Cart */
+.cart-list{min-height:120px;display:flex;flex-direction:column;gap:10px}
+.cart-row{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:rgba(0,0,0,0.12);border:1px solid rgba(255,255,255,0.02)}
+.qty{display:flex;gap:8px;align-items:center}
+.qty button{background:transparent;border-radius:6px;padding:6px 8px;border:1px solid rgba(255,255,255,0.04);color:#fff}
+
+/* totals */
+.totals{margin-top:12px;background:transparent;padding:10px;border-radius:8px}
+.line{display:flex;justify-content:space-between;padding:6px 0;color:var(--muted)}
+.total{font-size:18px;color:#fff;font-weight:800}
+
+/* sticky for checkout column */
+.sticky{position:sticky;top:28px}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;z-index:1200;background:rgba(2,6,23,0.4)}
+.modal.hidden{display:none}
+.modal-card{width:92%;max-width:720px;background:linear-gradient(180deg,#fff,#f8fafc);color:#0b1320;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(2,6,23,0.6)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid rgba(2,6,23,0.04)}
+.modal-body{padding:18px}
+.modal-foot{display:flex;gap:12px;justify-content:flex-end;padding:14px 18px;border-top:1px solid rgba(2,6,23,0.04)}
+.icon-btn{background:transparent;border:none;font-size:18px;cursor:pointer}
+
+/* history */
+.history-list{display:flex;flex-direction:column;gap:8px;max-height:220px;overflow:auto}
+.history-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+.history-item small{color:var(--muted);font-size:12px}
+
+/* invoice specific styles inside modal */
+.invoice-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.invoice-business{font-weight:800}
+.invoice-address{font-size:13px;color:var(--muted);margin-top:6px}
+.invoice-meta{font-size:13px;color:var(--muted);text-align:right}
+.invoice-table{width:100%;border-collapse:collapse;margin-top:8px}
+.invoice-table td, .invoice-table th{padding:8px;border-bottom:1px solid #f1f5f9}
+.invoice-footer{margin-top:12px;font-size:14px}
+
+/* small helpers */
+.hidden{display:none}
+.center{display:flex;align-items:center;justify-content:center}

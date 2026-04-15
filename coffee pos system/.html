@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coffee POS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header><h1>Coffee POS</h1></header>
+
+    <main class="layout">
+      <section class="menu">
+        <h2>Menu</h2>
+        <div id="menu-items" class="items"></div>
+      </section>
+
+      <section class="cart">
+        <h2>Cart</h2>
+        <div id="cart-list"></div>
+        <div class="summary">
+          <div>Subtotal: ₹<span id="subtotal">0.00</span></div>
+          <div>GST (5%): ₹<span id="tax">0.00</span></div>
+          <div>Total: ₹<strong id="total">0.00</strong></div>
+          <button id="checkout">Checkout</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="invoice-modal" class="modal hidden">
+      <div class="modal-body" id="invoice-content"></div>
+      <div class="modal-actions">
+        <button id="close-invoice">Close</button>
+        <button id="print-invoice">Print</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
