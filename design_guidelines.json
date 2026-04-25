@@ -1,0 +1,126 @@
+{
+  "theme": "light",
+  "archetype": "1 - Organic & Earthy",
+  "mood": "Warm, efficient, premium cafe experience, inviting yet highly structured",
+  "design_philosophy": "Fusion of functional clarity (POS needs speed) with warm, organic coffee shop aesthetics. Avoid sterile 'fintech' blues and grays. Instead, use earthy tones like bone-white, terracotta, and espresso. The UI should feel like a tactile, high-end wooden cafe counter.",
+  "colors": {
+    "background": {
+      "primary": "#FDFBF7",
+      "secondary": "#F4F1EA",
+      "tertiary": "#EAE5D9"
+    },
+    "text": {
+      "primary": "#2C1E16",
+      "secondary": "#5C4A3D",
+      "tertiary": "#8A7969"
+    },
+    "brand": {
+      "primary": "#D97757",
+      "primary_hover": "#BF6245",
+      "secondary": "#2C1E16",
+      "accent": "#7A8A70"
+    },
+    "status": {
+      "success": "#7A8A70",
+      "warning": "#E6A23C",
+      "error": "#C95A49",
+      "info": "#6B8EAD"
+    },
+    "border": {
+      "default": "#EAE5D9",
+      "focus": "#D97757"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-bold tracking-tight text-[#2C1E16]",
+      "h2": "text-2xl sm:text-3xl font-semibold tracking-tight text-[#2C1E16]",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight text-[#2C1E16]",
+      "h4": "text-lg font-medium text-[#2C1E16]",
+      "body_large": "text-lg leading-relaxed text-[#5C4A3D]",
+      "body": "text-base leading-relaxed text-[#5C4A3D]",
+      "small": "text-sm text-[#8A7969]",
+      "label": "text-xs font-bold uppercase tracking-[0.2em] text-[#8A7969]"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-8",
+    "section_gap": "gap-8 md:gap-12",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6",
+    "pos_grid": "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4",
+    "card_radius": "rounded-2xl",
+    "button_radius": "rounded-xl",
+    "input_radius": "rounded-xl",
+    "alignment": "Left-align dense tabular data and product cards. Center-align empty states and login dialogs."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#D97757] text-white hover:bg-[#BF6245] transition-colors rounded-xl font-medium",
+      "secondary": "bg-[#F4F1EA] text-[#2C1E16] hover:bg-[#EAE5D9] transition-colors rounded-xl font-medium border border-[#EAE5D9]",
+      "ghost": "text-[#5C4A3D] hover:bg-[#F4F1EA] hover:text-[#2C1E16] transition-colors rounded-xl font-medium"
+    },
+    "cards": {
+      "default": "bg-white border border-[#EAE5D9] rounded-2xl shadow-sm hover:shadow-md transition-shadow",
+      "interactive": "bg-white border border-[#EAE5D9] rounded-2xl shadow-sm hover:border-[#D97757] hover:shadow-md transition-all cursor-pointer"
+    },
+    "inputs": {
+      "default": "bg-white border border-[#EAE5D9] text-[#2C1E16] rounded-xl focus:ring-2 focus:ring-[#D97757]/20 focus:border-[#D97757] transition-all"
+    },
+    "sidebar_cart": {
+      "wrapper": "bg-white border-l border-[#EAE5D9] h-full flex flex-col shadow-[-4px_0_24px_rgba(0,0,0,0.02)]"
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Subtle lifts (-translate-y-0.5) and border color shifts for interactive elements. High contrast shifts for buttons.",
+    "active": "Scale down slightly (scale-95) for tactile feedback.",
+    "transitions": "Use 'transition-all duration-200 ease-out' universally.",
+    "list_animation": "Staggered fade-in for POS items to avoid jarring layout shifts when changing categories."
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "Duotone or Regular weight. Keep stroke consistent.",
+    "installation": "yarn add @phosphor-icons/react"
+  },
+  "images": {
+    "hero_login": {
+      "url": "https://images.unsplash.com/photo-1762117863076-b55c0dbf19ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBjdXAlMjBjYWZlfGVufDB8fHx8MTc3NDUxMTQ2M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Two drinks with latte art on a table. Use for the login screen background (half screen)."
+    },
+    "placeholder_pastry": {
+      "url": "https://images.unsplash.com/photo-1764516627486-db9aa6ba6132?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBwYXN0cnklMjBwbGF0ZXxlbnwwfHx8fDE3NzQ1MTE0NjR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Coffee and pastries on a windowsill. Use for default pastry/food items."
+    },
+    "placeholder_coffee": {
+      "url": "https://images.unsplash.com/photo-1625802269761-0f297f2f7d6c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBjdXAlMjBjYWZlfGVufDB8fHx8MTc3NDUxMTQ2M3ww&ixlib=rb-4.1.0&q=85",
+      "description": "White ceramic mug with coffee. Use for default coffee beverage items."
+    },
+    "filter_coffee_specialty": {
+      "url": "https://images.pexels.com/photos/2434159/pexels-photo-2434159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Brewing coffee. Can be used for banner or specialty item."
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure all text against #FDFBF7 or white meets APCA contrast standards. Do not use pure gray for text, use the warm #8A7969 or #5C4A3D.",
+    "focus": "All focus states must use a 2px ring of #D97757 with an offset. No `outline-none` without `focus:ring` replacements.",
+    "test_ids": "Mandatory `data-testid` on all POS item cards, cart buttons, checkout flow inputs, and admin navigation."
+  },
+  "surface_strategies": {
+    "pos_menu_area": "Solid background (#FDFBF7), relying on generous padding (p-6) to separate categories. No heavy shadows.",
+    "cart_sidebar": "Solid white (#FFFFFF) with a delicate 1px left border (#EAE5D9) and slight ambient shadow to distinguish it from the menu area. This creates a 'receipt' feel.",
+    "checkout_modal": "Solid background, soft shadow (shadow-[0_8px_32px_rgba(44,30,22,0.12)]), rounded-3xl. Do not use generic glassmorphism here, it needs to look like a physical receipt/invoice."
+  },
+  "instructions_to_main_agent": [
+    "Build the dashboard using pure HTML/Tailwind for structural bento layouts to allow for high creative flexibility. Use Shadcn components heavily customized to match the 'Cards' and 'Buttons' specs.",
+    "Implement the POS Menu as a responsive grid (`pos_grid`) where products have ample tap targets (essential for POS on tablets).",
+    "Cart must be permanently visible on desktop in a right-side sidebar. Mobile can use a bottom sheet or a toggleable sidebar.",
+    "The admin dashboard must maintain the same warm color palette but use a 'Control Room' grid for dense analytics data (e.g., Today's Sales, Inventory).",
+    "Do NOT use 'Inter' for headings. Use 'Outfit' for headings and 'Manrope' for body.",
+    "DO NOT use a default dark sidebar. The application should feel light, bright, and airy.",
+    "Add `data-testid` to all interactive components like 'add-to-cart-espresso', 'checkout-btn', 'login-submit'."
+  ]
+}
